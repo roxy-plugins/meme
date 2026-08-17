@@ -1,12 +1,12 @@
-/// <reference path="../../types/akashic-dashboard.d.ts" />
+/// <reference path="../../types/roxy-dashboard.d.ts" />
 import { useEffect, useState } from "react";
-import { api } from "@akashic/dashboard-ui";
+import { api } from "@roxy/dashboard-ui";
 
-// The Akashic Dashboard injects itself globally.
+// The Roxy Dashboard injects itself globally.
 // We declare it here to satisfy TypeScript in our standalone build.
 declare global {
   interface Window {
-    AkashicDashboard: any;
+    RoxyDashboard: any;
   }
 }
 
@@ -153,7 +153,7 @@ function MemeMain() {
   );
 }
 
-window.AkashicDashboard.registerPlugin({
+window.RoxyDashboard.registerPlugin({
   id: "meme",
   label: "Meme 表情包",
   viewLabel: "表情包",
